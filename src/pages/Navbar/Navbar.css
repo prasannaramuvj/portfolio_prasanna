@@ -1,0 +1,37 @@
+.left{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 10px;
+  background-color: aquamarine;
+  z-index: -1;
+  padding-top: 300px;
+}
+.icon{
+  display: flex;
+  gap: 50px;
+}
+.right{
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  width: 100px;
+  background-color: bisque;
+  padding: 10px;
+  z-index: -1;
+  padding-top: 300px;
+}
+.bottom{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom:0;
+  background-color: blue;
+  height: 50px;
+}
