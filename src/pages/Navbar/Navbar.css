@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 .left{
   position: absolute;
   top:0;
@@ -6,15 +9,25 @@
   width: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 40px;
   padding: 10px;
-  background-color: aquamarine;
-  z-index: -1;
-  padding-top: 300px;
+  z-index:-1;
+  padding-top: 120px;
+  font-family: var(--font-primary);
 }
 .icon{
   display: flex;
   gap: 50px;
+}
+.icon ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
 }
 .right{
   position: absolute;
@@ -22,16 +35,38 @@
   right:0;
   bottom: 0;
   width: 100px;
-  background-color: bisque;
   padding: 10px;
   z-index: -1;
-  padding-top: 300px;
+  padding-top: 250px;
+
 }
 .bottom{
   position: absolute;
   left: 0;
   right: 0;
   bottom:0;
-  background-color: blue;
-  height: 50px;
+  height:30px;
+  font-family: var(--font-primary);
+  ul{
+    display: flex;
+  justify-content: space-around;
+}
+}
+.title{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+}
+.top{
+  z-index:99999999;
+}
+
+
+* {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
 }

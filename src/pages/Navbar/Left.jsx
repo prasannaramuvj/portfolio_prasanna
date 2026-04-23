@@ -18,15 +18,19 @@ const LinkedInIcon = () => (
 const Left = () => {
   return (
     <>
-      <div className="left">
-        <div className='-rotate-90 text-2xl'>Projects</div>
-        <div className="icon">
-          <ul>
-            <li>
+      <div className="left flex items-center justify-space-between gap-10">
+        <div className='-rotate-90  text-lg lg:text-2xl cursor-pointer'>Projects</div>
+        <div className="icon lg:mt-10">
+          <ul className='flex flex-col gap-4 items-center'>
+            <li className="cursor-pointer">
               <GitIcon />
             </li>
+            <li className="cursor-pointer" >
+              <LinkedInIcon/>
+            </li>
             <li>
-              <LinkedInIcon />
+              <div class="w-[2px] h-50 bg-black z-10"></div>
+
             </li>
           </ul>
         </div>

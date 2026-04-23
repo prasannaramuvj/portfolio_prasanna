@@ -3,9 +3,9 @@ import React from 'react'
 const Bottom = () => {
   return (
     <div className="bottom">
-      <ul className='flex gap-100 justify-center items-center'>
-        <li>ABout</li>
-        <li>Myskills</li>
+      <ul className='bottoms text-lg lg:text-2xl'>
+        <li className='cursor-pointer'> <h2>About</h2></li>
+        <li className='cursor-pointer'><h2>Myskills</h2></li>
       </ul>
     </div>
   )
