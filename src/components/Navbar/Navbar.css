@@ -45,7 +45,7 @@
   left: 0;
   right: 0;
   bottom:0;
-  height:30px;
+  height:40px;
   font-family: var(--font-primary);
   ul{
     display: flex;
@@ -57,6 +57,12 @@
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
+}
+.titles{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
 .top{
   z-index:99999999;
