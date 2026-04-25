@@ -7,7 +7,7 @@ import profile from "../assets/profile_img.png";
 import bg from '../assets/bg.jpg';
 const About = () => {
   return (
-    <div className="w-full min-h-screen bg">
+    <div className="w-full min-h-screen">
       <Top />
       <Left />
       <div className="py-10 md:pl-20 pt-0 md:pt-20 md:p-5 mt-10">
