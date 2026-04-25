@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
 
-.left{
+.left {
   position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width:60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  gap: 50px;
   padding: 10px;
-  z-index:-1;
+  z-index: 999999999;
   padding-top: 120px;
   font-family: var(--font-primary);
 }
-.icon{
+
+
+
+
+.icon {
   display: flex;
   gap: 50px;
 }
-.icon ul{
+.icon ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -29,50 +33,48 @@
   gap: 24px;
   align-items: center;
 }
-.right{
+.right {
   position: absolute;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   bottom: 0;
-  width: 100px;
+  width:50px;
   padding: 10px;
-  z-index: -1;
+  z-index: 10;
   padding-top: 250px;
-
 }
-.bottom{
+.bottom {
   position: absolute;
   left: 0;
   right: 0;
-  bottom:0;
-  height:40px;
+  bottom: 0;
+  height: 40px;
   font-family: var(--font-primary);
-  ul{
+  ul {
     display: flex;
-  justify-content: space-around;
+    justify-content: space-around;
+  }
 }
-}
-.title{
+.title {
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 24px;
 }
-.titles{
+.titles {
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
 }
-.top{
-  z-index:99999999;
+.top {
+  z-index: 99999999;
 }
-
 
 * {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-
 }
+

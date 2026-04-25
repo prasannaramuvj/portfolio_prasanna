@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "motion/react"
+import { Link } from 'react-router-dom'
 
 const Right = () => {
   return (
@@ -16,7 +17,9 @@ const Right = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.0 }}
       >
-        <h2 className='transition duration-300 hover:scale-110'>Feast</h2>
+        <Link to="/experience">
+        <h2 className='transition duration-300 hover:scale-110'>Experience</h2>
+        </Link>
       </motion.div>
     </motion.div>
     </>

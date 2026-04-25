@@ -1,0 +1,109 @@
+.maincontent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  z-index: -999;
+}
+
+.maincontent .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.maincontent h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.maincontent .subtitle {
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+}
+
+/* Minimal Snow Background */
+.snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.15); /* Light mode snow */
+}
+
+:global(.dark) .snow-container, .dark .snow-container {
+  color: rgba(255, 255, 255, 0.4); /* Dark mode snow */
+}
+
+.snow-layer {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-image: 
+    radial-gradient(4px 4px at 10% 20%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 30% 50%, currentColor 50%, transparent),
+    radial-gradient(5px 5px at 80% 10%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 60% 80%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 40% 90%, currentColor 50%, transparent),
+    radial-gradient(6px 6px at 90% 40%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 20% 70%, currentColor 50%, transparent),
+    radial-gradient(5px 5px at 70% 30%, currentColor 50%, transparent);
+  background-size: 100% 50%;
+  animation: snow-fall 20s linear infinite;
+}
+
+.snow-layer.layer-2 {
+  background-image: 
+    radial-gradient(3px 3px at 15% 15%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 35% 45%, currentColor 50%, transparent),
+    radial-gradient(2px 2px at 85% 25%, currentColor 50%, transparent),
+    radial-gradient(5px 5px at 55% 75%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 45% 85%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 95% 35%, currentColor 50%, transparent),
+    radial-gradient(2px 2px at 25% 65%, currentColor 50%, transparent),
+    radial-gradient(5px 5px at 75% 15%, currentColor 50%, transparent);
+  animation-duration: 25s;
+  opacity: 0.8;
+}
+
+.snow-layer.layer-3 {
+  background-image: 
+    radial-gradient(2px 2px at 5% 25%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 25% 55%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 65% 15%, currentColor 50%, transparent),
+    radial-gradient(2px 2px at 45% 65%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 85% 85%, currentColor 50%, transparent),
+    radial-gradient(2px 2px at 75% 45%, currentColor 50%, transparent),
+    radial-gradient(4px 4px at 15% 75%, currentColor 50%, transparent),
+    radial-gradient(3px 3px at 95% 10%, currentColor 50%, transparent);
+  animation-duration: 30s;
+  opacity: 0.6;
+}
+
+@keyframes snow-fall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+.bg {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}

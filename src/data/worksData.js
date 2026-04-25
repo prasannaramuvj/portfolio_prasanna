@@ -1,0 +1,58 @@
+const worksData = [
+  {
+    id: 1,
+    title: "ComebackAlums V2.0",
+    description: "CSI Sponsored web development competition winning Project and Personal Favorite.",
+    tags: ["React", "Node.js", "MongoDB"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80",
+    github: "https://github.com/",
+    deploy: "https://vercel.com/",
+  },
+  {
+    id: 2,
+    title: "Google Clone",
+    description: "Clone of Google with dark mode functionality, built with Google Custom Search API and ReactJS.",
+    tags: ["ReactJS", "Google API"],
+    image: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=600&q=80",
+    github: "https://github.com/",
+    deploy: "https://vercel.com/",
+  },
+  {
+    id: 3,
+    title: "Netflix Frontend Clone",
+    description: "Netflix frontend clone with React JS and Firebase Backend with TMDB API.",
+    tags: ["React", "Firebase", "TMDB API"],
+    image: "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=600&q=80",
+    github: "https://github.com/",
+    deploy: "https://vercel.com/",
+  },
+  {
+    id: 4,
+    title: "JioFi-Batte Notification",
+    description: "Solve a real world problem with JioFi (Portable Hotspot) battery dying due to low battery alerts.",
+    tags: ["Python", "Automation"],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80",
+    github: "https://github.com/",
+    deploy: null,
+  },
+  {
+    id: 5,
+    title: "Portfolio V1",
+    description: "First iteration of personal portfolio built with vanilla HTML, CSS and JavaScript.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80",
+    github: "https://github.com/",
+    deploy: "https://vercel.com/",
+  },
+  {
+    id: 6,
+    title: "DevBoard",
+    description: "A developer dashboard aggregating GitHub stats, LeetCode progress, and daily coding goals.",
+    tags: ["Next.js", "GraphQL", "Tailwind"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    github: "https://github.com/",
+    deploy: "https://vercel.com/",
+  },
+];
+ 
+export default worksData;
