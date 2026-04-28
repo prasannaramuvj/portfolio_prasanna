@@ -41,8 +41,8 @@ const worksData = [
     description: "First iteration of personal portfolio built with vanilla HTML, CSS and JavaScript.",
     tags: ["HTML", "CSS", "JavaScript"],
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80",
-    github: "https://github.com/",
-    deploy: "https://vercel.com/",
+    github: "https://github.com/prasannaramuvj/portfolio_prasanna.git",
+    deploy: "https://prasannaramuvj.github.io/portfolio_prasanna/#/",
   },
   {
     id: 6,
