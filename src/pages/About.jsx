@@ -5,12 +5,26 @@ import { motion } from "motion/react";
 import "./About.css";
 import profile from "../assets/profile_img.jpeg";
 import bg from '../assets/bg.jpg';
+import SplashCursor from '../components/Magic'
+
 const About = () => {
   return (
     <div className="w-full min-h-screen">
       <Top />
       <Left />
       <div className="py-10 md:pl-20 pt-0 md:pt-20 md:p-5">
+        <SplashCursor
+            DENSITY_DISSIPATION={3.5}
+            VELOCITY_DISSIPATION={2}
+            PRESSURE={0.1}
+            CURL={3}
+            SPLAT_RADIUS={0.2}
+            SPLAT_FORCE={6000}
+            COLOR_UPDATE_SPEED={10}
+            SHADING
+            RAINBOW_MODE={false}
+            COLOR="#A855F7"
+          />
         <motion.div
           className="flex flex-col-reverse md:flex-row items-center gap-6 pl-5"
           initial={{ opacity: 0 }}

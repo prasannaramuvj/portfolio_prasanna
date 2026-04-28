@@ -6,6 +6,8 @@ import Bottom from "../components/Navbar/Bottom";
 import "./Home.css";
 import Loading from "../components/Loading";
 import { motion } from "motion/react";
+import TextType from '../components/Texttype';
+// import { gsap } from 'gsap';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,6 +46,19 @@ const Home = () => {
           <h1 className="text-black md:text-2xl text-lg">
             PRASANNA R
           </h1>
+          <TextType 
+            text={["Frontend Developer" , "React js Developer" ," UI Developer"]}
+            typingSpeed={75}
+            pauseDuration={3500}
+            showCursor
+            cursorCharacter="_"
+            texts={["Frontend Developer" , "React js Developer" ," UI Developer"]}
+            deletingSpeed={50}
+            variableSpeedEnabled
+            variableSpeedMin={60}
+            variableSpeedMax={120}
+            cursorBlinkDuration={1.1}
+          />
         </motion.div>
       </div>
     </div>
