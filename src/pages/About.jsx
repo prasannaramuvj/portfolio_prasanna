@@ -3,7 +3,7 @@ import Top from "../components/Navbar/Top";
 import Left from "../components/Navbar/Left";
 import { motion } from "motion/react";
 import "./About.css";
-import profile from "../assets/profile_img.png";
+import profile from "../assets/profile_img.jpeg";
 import bg from '../assets/bg.jpg';
 const About = () => {
   return (
@@ -26,7 +26,7 @@ const About = () => {
             <p className="pb-2">
               I'm a fresher Frontend Developer with hands-on experience in React
               and Tailwind CSS. Currently leveling up my skills by diving deep
-              into the MERN stack — MongoDB, Express, React, and Node.js.hhhhhh
+              into the python backend development.
             </p>
 
             <p className="pb-2">
@@ -41,7 +41,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <motion.div className="w-full md:w-1/2 flex justify-center pt-5 md-pt-0 "
+          <motion.div className="w-full md:w-1/2 flex justify-center pt-5 md-pt-0 md:mt-0 "
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2.5 }}>

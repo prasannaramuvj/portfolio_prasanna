@@ -25,19 +25,18 @@ const SkillCard = ({ skill, index }) => (
 
 const Myskill = () => {
   return (
-    <div className="relative w-full h-screen">
-      {/* Navbars - fixed */}
+    <div className="relative w-full h-screen overflow-hidden">
       <div className="navigation z-50">
         <Top />
         <Left />
       </div>
 
-      <div className="ml-0 md:ml-20 mt-16 p-6 h-screen overflow-y-auto">
+      <div className="ml-0 md:ml-20 md:mt-16 mt-0 p-6 h-screen">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col md:flex-row flex-wrap items-stretch gap-8 mb-12"
+          className="flex flex-col md:flex-row flex-wrap items-stretch gap-8"
         >
           {skilldata.map((skill, index) => (
             <SkillCard key={skill.id} skill={skill} index={index} />
