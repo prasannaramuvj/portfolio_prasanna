@@ -10,7 +10,7 @@ const About = () => {
     <div className="w-full min-h-screen">
       <Top />
       <Left />
-      <div className="py-10 md:pl-20 pt-0 md:pt-20 md:p-5 mt-10">
+      <div className="py-10 md:pl-20 pt-0 md:pt-20 md:p-5">
         <motion.div
           className="flex flex-col-reverse md:flex-row items-center gap-6 pl-5"
           initial={{ opacity: 0 }}

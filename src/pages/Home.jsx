@@ -10,7 +10,6 @@ import { motion } from "motion/react";
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -18,13 +17,12 @@ const Home = () => {
     return () => clearTimeout(timer);
   }, []);
 
-
   if (isLoading) {
     return <Loading />;
   }
 
   return (
-    <div className="w-full h-screen relative bg">
+    <div className="w-full h-screen relative home">
       <div className="snow-container">
         <div className="snow-layer"></div>
         <div className="snow-layer layer-2"></div>
@@ -43,7 +41,9 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className="text-black dark:text-white md:text-2xl text-lg">PRASANNA R</h1>
+          <h1 className="text-black md:text-2xl text-lg">
+            PRASANNA R
+          </h1>
         </motion.div>
       </div>
     </div>
