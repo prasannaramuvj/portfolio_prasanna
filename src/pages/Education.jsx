@@ -12,7 +12,7 @@ const Educationcard = ({ education, index }) => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.15 }}
-    className="bg-white p-6 rounded-xl shadow-xl flex-1 min-w-[240px] ml-9"
+    className="p-6 rounded-xl shadow-xl flex-1 min-w-[240px] ml-9"
   >
     <h2 className="text-xl font-semibold mb-2">{education.college}</h2>
     <span>{education.location}</span>

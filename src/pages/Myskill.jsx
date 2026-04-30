@@ -31,7 +31,7 @@ const Myskill = () => {
         <Left />
       </div>
 
-      <div className="ml-0 md:ml-20 md:mt-16 mt-0 p-6 h-screen">
+      <div className="ml-0 md:ml-20 md:mt-16 mt-0 p-8 h-screen">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
