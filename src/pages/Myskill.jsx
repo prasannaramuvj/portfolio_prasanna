@@ -12,20 +12,20 @@ const SkillCard = ({ skill, index }) => (
     initial={{ opacity: 0, y: 30 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5, delay: index * 0.15 }}
-    className="bg-white p-6 rounded-xl shadow-xl flex-1 min-w-[240px] ml-9 md:ml-0"
+    className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl flex-1 min-w-[240px] ml-9 md:ml-0 transition-colors duration-300"
   >
-    <h2 className="text-xl font-semibold mb-2">{skill.title}</h2>
-    <p className="text-gray-600 mb-4">{skill.description}</p>
-    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-1">
+    <h2 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{skill.title}</h2>
+    <p className="text-gray-600 dark:text-gray-400 mb-4">{skill.description}</p>
+    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">
       {skill.subTitle}
     </h3>
-    <p className="text-gray-700">{skill.technologies.join(", ")}</p>
+    <p className="text-gray-700 dark:text-gray-300">{skill.technologies.join(", ")}</p>
   </motion.div>
 );
 
 const Myskill = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="navigation z-50">
         <Top />
         <Left />

@@ -33,20 +33,20 @@ const Education = () => {
       </div>
 
       <div className="ml-0 p-6 h-screen overflow-y-auto">
-  <div className="flex justify-center min-h-full items-center">
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-8 w-full max-w-5xl py-20 md:py-0"
-    >
-      {education.map((edu, index) => (
-        <Educationcard key={edu.id} education={edu} index={index} />
-      ))}
-    </motion.div>
-  </div>
-</div>
-      
+        <div className="flex justify-center min-h-full items-center">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col md:flex-row flex-wrap items-stretch justify-center gap-8 w-full max-w-5xl py-20 md:py-0"
+          >
+            {education.map((edu, index) => (
+              <Educationcard key={edu.id} education={edu} index={index} />
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
       <div className="text-skill hidden md:flex">Education</div>
     </div>
   );

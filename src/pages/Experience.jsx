@@ -8,10 +8,10 @@ import Left from "../components/Navbar/Left";
 
 // ── Badge styles per type ─────────────────────────────────────────────────────
 const badgeStyle = {
-  "FULL-TIME": "border-white/20 text-white/60",
-  CONTRACT: "border-amber-400/30 text-amber-300/70",
-  INTERNSHIP: "border-sky-400/30 text-sky-300/70",
-  "PART-TIME": "border-green-400/30 text-green-300/70",
+  "FULL-TIME": "border-gray-400/40 text-gray-500 dark:border-white/20 dark:text-white/60",
+  CONTRACT: "border-amber-500/40 text-amber-600 dark:border-amber-400/30 dark:text-amber-300/70",
+  INTERNSHIP: "border-sky-500/40 text-sky-600 dark:border-sky-400/30 dark:text-sky-300/70",
+  "PART-TIME": "border-green-500/40 text-green-600 dark:border-green-400/30 dark:text-green-300/70",
 };
 
 // ── Left Card ─────────────────────────────────────────────────────────────────
@@ -22,8 +22,8 @@ const ExpCard = ({ exp, isActive, onClick }) => (
       relative cursor-pointer rounded-xl p-5 transition-all duration-300 border ml-10
       ${
         isActive
-          ? "bg-white/[0.07] border-white/20"
-          : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.04] hover:border-white/15"
+          ? "bg-black/[0.07] dark:bg-white/[0.07] border-black/20 dark:border-white/20"
+          : "bg-black/[0.02] dark:bg-white/[0.02] border-black/[0.06] dark:border-white/[0.06] hover:bg-black/[0.04] dark:hover:bg-white/[0.04] hover:border-black/15 dark:hover:border-white/15"
       }
     `}
   >
@@ -31,38 +31,38 @@ const ExpCard = ({ exp, isActive, onClick }) => (
     {isActive && (
       <motion.div
         layoutId="activeBar"
-        className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-white/60"
+        className="absolute left-0 top-4 bottom-4 w-[3px] rounded-full bg-gray-700 dark:bg-white/60"
       />
     )}
 
     <div className="pl-3">
       {/* Company + badge */}
       <div className="flex flex-wrap items-start justify-between gap-2 mb-1.5">
-        <h2 className="font-serif text-base sm:text-lg font-bold text-white leading-snug">
+        <h2 className="font-serif text-base sm:text-lg font-bold text-gray-900 dark:text-white leading-snug">
           {exp.company}
         </h2>
         <span
-          className={`text-[9px] tracking-widest uppercase border rounded-full px-2.5 py-0.5 font-medium ${badgeStyle[exp.type] || "border-white/20 text-white/50"}`}
+          className={`text-[9px] tracking-widest uppercase border rounded-full px-2.5 py-0.5 font-medium ${badgeStyle[exp.type] || "border-gray-400/40 text-gray-500 dark:border-white/20 dark:text-white/50"}`}
         >
           {exp.type}
         </span>
       </div>
 
       {/* Role */}
-      <p className="text-sm font-semibold text-white/75 mb-0.5">{exp.role}</p>
+      <p className="text-sm font-semibold text-gray-700 dark:text-white/75 mb-0.5">{exp.role}</p>
 
       {/* Duration */}
-      <p className="text-xs text-white/45 mb-0.5">{exp.duration}</p>
+      <p className="text-xs text-gray-500 dark:text-white/45 mb-0.5">{exp.duration}</p>
 
       {/* Location */}
-      <p className="text-[11px] text-white/30 italic mb-4">{exp.location}</p>
+      <p className="text-[11px] text-gray-400 dark:text-white/30 italic mb-4">{exp.location}</p>
 
       {/* Skills */}
       <div className="flex flex-wrap gap-1.5">
         {exp.skills.map((s) => (
           <span
             key={s}
-            className="text-[10px] bg-white/[0.08] text-white/60 rounded-md px-2 py-0.5 font-medium"
+            className="text-[10px] bg-black/[0.08] dark:bg-white/[0.08] text-gray-700 dark:text-white/60 rounded-md px-2 py-0.5 font-medium"
           >
             {s}
           </span>
@@ -92,10 +92,10 @@ const PointsPanel = ({ exp }) => (
             transition={{ delay: i * 0.07, duration: 0.28 }}
             className="flex items-start gap-4"
           >
-            <span className="mt-[5px] flex-shrink-0 text-white/35 text-[10px]">
+            <span className="mt-[5px] flex-shrink-0 text-gray-400 dark:text-white/35 text-[10px]">
               ▶
             </span>
-            <p className="text-sm sm:text-base leading-relaxed text-white/75 font-light">
+            <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-white/75 font-light">
               {point}
             </p>
           </motion.li>
@@ -127,7 +127,7 @@ const MobileExperience = () => {
                 transition={{ duration: 0.35 }}
                 className="overflow-hidden"
               >
-                <div className="bg-white/[0.03] border border-white/[0.06] border-t-0 rounded-b-xl ml-10">
+      <div className="bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.06] dark:border-white/[0.06] border-t-0 rounded-b-xl ml-10">
                   <PointsPanel exp={exp} />
                 </div>
               </motion.div>
@@ -145,7 +145,7 @@ const Experience = () => {
   const activeExp = experience.find((e) => e.id === activeId);
 
   return (
-    <div className="relative w-full h-screen bg-[#0d0d0d] overflow-hidden flex flex-col">
+    <div className="relative w-full h-screen bg-gray-100 dark:bg-[#0d0d0d] overflow-hidden flex flex-col transition-colors duration-300">
       {/* ── Fixed Navbars ── */}
       <div className="navigation z-50">
         <Top />
@@ -158,7 +158,7 @@ const Experience = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-0 font-serif font-black text-transparent whitespace-nowrap"
         style={{
           fontSize: "clamp(36px, 10vw, 130px)",
-          WebkitTextStroke: "1px rgba(255,255,255,0.05)",
+          WebkitTextStroke: "1px rgba(128,128,128,0.08)",
           letterSpacing: "-0.02em",
         }}
       >
@@ -174,7 +174,7 @@ const Experience = () => {
       <div className="hidden md:flex flex-row h-full pt-16 pl-20 relative z-10">
         {/* LEFT — scrollable card list */}
         <div
-          className="w-[400px] lg:w-[420px] xl:w-[460px] flex-shrink-0 overflow-y-auto h-full border-r border-white/[0.07] px-6 py-10 space-y-4
+        className="w-[400px] lg:w-[420px] xl:w-[460px] flex-shrink-0 overflow-y-auto h-full border-r border-black/[0.07] dark:border-white/[0.07] px-6 py-10 space-y-4
           [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {experience.map((exp) => (

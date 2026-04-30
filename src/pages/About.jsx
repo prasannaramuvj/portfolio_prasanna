@@ -9,7 +9,7 @@ import SplashCursor from '../components/Magic'
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       <Top />
       <Left />
       <div className="py-10 md:pl-20 pt-0 md:pt-20 md:p-5">

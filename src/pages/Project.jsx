@@ -60,10 +60,10 @@ const WorkCard = ({ project, index }) => {
         style={{ transformStyle: "preserve-3d" }}
       >
         <div
-          className={`${faceBase} bg-[#f0ede8] p-5 sm:p-6 md:p-7 justify-between shadow-md`}
+          className={`${faceBase} bg-[#f0ede8] dark:bg-[#1e1e1e] p-5 sm:p-6 md:p-7 justify-between shadow-md`}
           style={{ backfaceVisibility: "hidden" }}
         >
-          <h2 className="font-serif text-base sm:text-lg md:text-2xl font-bold text-[#111] leading-tight">
+          <h2 className="font-serif text-base sm:text-lg md:text-2xl font-bold text-[#111] dark:text-white leading-tight">
             {project.title}
           </h2>
  
@@ -75,13 +75,13 @@ const WorkCard = ({ project, index }) => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[9px] sm:text-[10px] md:text-xs font-medium uppercase tracking-wide bg-black/10 text-[#333] rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1"
+              className="text-[9px] sm:text-[10px] md:text-xs font-medium uppercase tracking-wide bg-black/10 dark:bg-white/10 text-[#333] dark:text-gray-300 rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            <p className="text-[10px] text-[#999] mt-3 text-center tracking-widest uppercase">
+            <p className="text-[10px] text-gray-400 dark:text-[#999] mt-3 text-center tracking-widest uppercase">
               tap to flip
             </p>
           </div>
@@ -175,7 +175,7 @@ const Work = () => {
   };
  
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-white dark:bg-[#111] transition-colors duration-300">
  
       {/* Navbars */}
       <div className="navigation z-50">
@@ -189,7 +189,7 @@ const Work = () => {
         className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 font-serif font-black leading-none text-transparent ml-10"
         style={{
           fontSize: "clamp(80px, 20vw, 220px)",
-          WebkitTextStroke: "1px rgba(255,255,255,0.07)",
+          WebkitTextStroke: "1px rgba(128,128,128,0.08)",
         }}
       >
         WORK
@@ -226,12 +226,12 @@ const Work = () => {
       {/* Swipe hint */}
       <p
         aria-hidden="true"
-        className="hidden sm:block absolute bottom-5 right-8 md:right-12 font-serif font-black text-5xl md:text-7xl text-white/10 pointer-events-none select-none z-5"
+        className="hidden sm:block absolute bottom-5 right-8 md:right-12 font-serif font-black text-5xl md:text-7xl text-black/10 dark:text-white/10 pointer-events-none select-none z-5"
       >
         Swipe
       </p>
-      <span className="hidden sm:block absolute bottom-8 right-7 w-2 h-2 rounded-full bg-white/25 animate-pulse z-10" />
-      <p className="sm:hidden absolute bottom-4 left-1/2 -translate-x-1/2 text-white/30 text-xs tracking-widest uppercase z-10">
+      <span className="hidden sm:block absolute bottom-8 right-7 w-2 h-2 rounded-full bg-black/25 dark:bg-white/25 animate-pulse z-10" />
+      <p className="sm:hidden absolute bottom-4 left-1/2 -translate-x-1/2 text-black/30 dark:text-white/30 text-xs tracking-widest uppercase z-10">
         ← swipe →
       </p>
     </div>

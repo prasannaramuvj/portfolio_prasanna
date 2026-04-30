@@ -1,8 +1,12 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import { useTheme } from "../../context/ThemeContext";
 
 const Top = ({ className }) => {
+
+    const { theme, toggleTheme } = useTheme();
+
   const Backbtn = () => (
     <svg
       fill="currentColor"
@@ -18,7 +22,7 @@ const Top = ({ className }) => {
   return (
     <>
       <motion.div
-        className={`top relative ${className || "bg-white text-black"}`}
+        className={`top relative ${className || "bg-white dark:bg-gray-900 text-black dark:text-white"}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -44,16 +48,12 @@ const Top = ({ className }) => {
               <Backbtn />
             </Link>
           </motion.li>
-          {/* <button
-            onClick={() => setDark(!dark)}
-            className="cursor-pointer w-10 h-6 rounded-full flex items-center px-1 bg-gray-300 dark:bg-yellow-400 transition duration-300"
+            <button
+            onClick={toggleTheme}
+            className="px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100 text-sm transition-colors duration-300 hover:scale-105"
           >
-            <motion.span
-              animate={{ x: dark ? 16 : 0 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="w-4 h-4 rounded-full bg-white dark:bg-gray-900 block"
-            />
-          </button> */}
+            {theme === "dark" ? "☀ Light" : "🌙 Dark"}
+          </button>
 
           <motion.li
             initial={{ x: 50, opacity: 0 }}

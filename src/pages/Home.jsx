@@ -11,6 +11,7 @@ import TextType from '../components/Texttype';
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -24,7 +25,7 @@ const Home = () => {
   }
 
   return (
-    <div className="w-full h-screen relative home">
+    <div className="w-full h-screen relative home bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="snow-container">
         <div className="snow-layer"></div>
         <div className="snow-layer layer-2"></div>
@@ -43,7 +44,7 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
-          <h1 className="text-black md:text-2xl text-lg">
+          <h1 className="text-black dark:text-white md:text-2xl text-lg">
             PRASANNA R
           </h1>
           <TextType 

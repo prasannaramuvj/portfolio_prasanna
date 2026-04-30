@@ -41,12 +41,11 @@
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
-  color: rgba(0, 0, 0, 0.15); /* Light mode snow */
+  color: rgba(0, 0, 0, 0.12); /* Light mode snow = dark dots */
 }
 
-:global(.dark) .snow-container,
 .dark .snow-container {
-  color: rgba(255, 255, 255, 0.4); /* Dark mode snow */
+  color: rgba(255, 255, 255, 0.4); /* Dark mode snow = white dots */
 }
 
 .snow-layer {

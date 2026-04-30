@@ -34,7 +34,7 @@ const Left = ({ className }) => {
   return (
     <>
       <motion.div
-        className={`left flex items-center lg:gap-10 ${className || 'text-black'}`}
+        className={`left flex items-center lg:gap-10 ${className || 'text-black dark:text-white'}`}
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4 }}

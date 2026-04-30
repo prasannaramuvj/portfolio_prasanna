@@ -5,10 +5,12 @@ import Home from "./pages/Home";
 import Myskill from "./pages/Myskill";
 import Experience from "./pages/Experience";
 import Education from "./pages/Education";
+import { ThemeProvider } from "./context/ThemeContext";
+
 
 function App() {
   return (
-    <>
+    <ThemeProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Project />} />
@@ -19,7 +21,7 @@ function App() {
 
 
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }
 
