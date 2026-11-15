@@ -18,6 +18,19 @@ const experienceData = [
       "Built AI-first workflows using MCP, RAG pipelines, LLM integrations, and voice models.",
     ],
   },
+  {
+    id:2,
+    company: "ZF RANE Automative India",
+    role: "Industry 4.0 Developer Trainee",
+    duration :"SEP 2026 - Current",
+    location :"Trichy,621135",
+    type:"FULL-TIME",
+    skills:["HTML","CSS","BOOTSTRAP","PYTHON","DJANGO","MSSQL"],
+    points:[
+      "Build interactive web apllication , contributing reducing manual work",
+      "Build frontend dashbaords visulaize data easy to find out work flow"
+    ]
+  }
 
 ];
  
